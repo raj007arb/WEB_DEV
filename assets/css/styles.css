@@ -514,7 +514,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(240, 30%, 10%); /* Very Dark Gray Background */
+  background-color: hsl(120, 100%, 90%); /* Light Neon Green Hover Effect */
   padding: 20px;
   border-radius: 50%; /* Circle container */
   transition: all 0.3s ease;
@@ -534,8 +534,5 @@ img {
   object-fit: cover;
 }
 
-/* Hover Effect */
-.home__img:hover {
-  background-color: hsl(120, 100%, 90%); /* Light Neon Green Hover Effect */
-}
+
 
