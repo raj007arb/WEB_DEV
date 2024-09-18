@@ -49,6 +49,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  background-color: #0d1117;
 }
 
 h1, h2, p {
