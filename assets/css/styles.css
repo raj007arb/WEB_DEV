@@ -506,7 +506,6 @@ img {
     width: 450px;
   }
 }
-
 /* Root Colors */
 :root {
   --primary-color: hsl(120, 100%, 50%); /* Neon Green */
@@ -519,26 +518,23 @@ img {
 /* Home Image Container */
 .home__img-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end; /* Align the image to the right */
+  align-items: center; /* Center it vertically */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  padding-right: 50px; /* Space from the right edge */
   background-color: var(--background-color); /* Very Dark Gray Background */
-  border: 5px solid var(--primary-color); /* Neon Green Border */
-  border-radius: 50%; /* Circle Shape */
-  padding: 10px;
-  width: 200px; /* Adjust as per your image size */
-  height: 200px; /* Adjust as per your image size */
-  transition: border-color 0.3s ease-in-out;
+  position: relative;
 }
 
-/* Profile Image */
+/* Profile Image (PNG) */
 .home__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%; /* Ensure image is circular */
+  max-width: 300px; /* Limit the size of the image */
+  height: auto;
+  display: block;
 }
 
-/* Hover Effect */
-.home__img-container:hover {
-  border-color: var(--hover-color); /* Light Neon Green on Hover */
+/* Neon Glow Effect */
+.home__img-container:hover .home__img {
+  box-shadow: 0px 0px 20px 5px var(--primary-color); /* Neon Green Glow on Hover */
 }
