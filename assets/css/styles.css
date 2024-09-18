@@ -359,7 +359,7 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: hsl(240, 10%, 50%);;
+  background-color: hsl(240, 10%, 50%);
   color: var(--text-color); /* Neon green */
   text-align: center;
   font-weight: var(--font-semi);
@@ -393,9 +393,11 @@ img {
   width: 260px;
 }
 
+
 .home__blob {
-  fill: var(--first-color);
+  fill: hsl(240, 10%, 50%); /* Dark Gray */
 }
+
 
 .home__blob-img {
   width: 360px;
