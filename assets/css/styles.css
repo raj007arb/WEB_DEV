@@ -506,3 +506,36 @@ img {
     width: 450px;
   }
 }
+
+
+
+/* Profile Image Section */
+.home__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(240, 30%, 10%); /* Very Dark Gray Background */
+  padding: 20px;
+  border-radius: 50%; /* Circle container */
+  transition: all 0.3s ease;
+}
+
+/* Blob Image */
+.home__blob {
+  width: 300px;
+  height: 300px;
+}
+
+/* Profile Image */
+.home__blob-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Hover Effect */
+.home__img:hover {
+  background-color: hsl(120, 100%, 90%); /* Light Neon Green Hover Effect */
+}
+
