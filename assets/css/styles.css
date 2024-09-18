@@ -1,26 +1,31 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-  /* HSL color mode */
-  --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
+  
+  /*===== New Neon and Darker Colors =====*/
+  --first-color: hsl(120, 100%, 50%); /* Neon green */
+  --second-color: hsl(240, 10%, 50%); /* Dark gray for secondary text */
+  --background-color: hsl(240, 30%, 10%); /* Very dark gray */
+  --hover-color: hsl(120, 100%, 90%); /* Light neon green for hover */
+  --text-color: hsl(120, 100%, 75%); /* Neon green for main text */
+  
+  /*===== Typography =====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
+
+  /*===== Margins =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
+
   /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
@@ -48,9 +53,8 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--second-color);
-  background-color: #c2d4ff;
-  
+  color: var(--text-color); /* Neon green text */
+  background-color: var(--background-color); /* Very dark gray background */
 }
 
 h1, h2, p {
@@ -65,6 +69,11 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--first-color); /* Neon green links */
+}
+
+a:hover {
+  color: var(--hover-color); /* Light neon green hover */
 }
 
 img {
@@ -77,7 +86,7 @@ img {
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--first-color);
+  color: var(--text-color); /* Neon green */
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
@@ -92,7 +101,7 @@ img {
   right: 0;
   margin: auto;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: var(--first-color); /* Neon green underline */
 }
 
 .section {
@@ -114,7 +123,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: hsl(240, 30%, 15%); /* Slightly lighter dark gray */
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -135,7 +144,7 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--second-color);
+    background-color: var(--second-color); /* Dark gray background */
     transition: .5s;
   }
 }
@@ -146,11 +155,7 @@ img {
 
 .nav__link {
   position: relative;
-  color: #fff;
-}
-
-.nav__link:hover {
-  position: relative;
+  color: var(--text-color); /* Neon green */
 }
 
 .nav__link:hover::after {
@@ -160,15 +165,11 @@ img {
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
-}
-
-.nav__logo {
-  color: var(--second-color);
+  background-color: var(--first-color); /* Neon green */
 }
 
 .nav__toggle {
-  color: var(--second-color);
+  color: var(--text-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -203,10 +204,11 @@ img {
 .home__title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
+  color: var(--text-color); /* Neon green */
 }
 
 .home__title-color {
-  color: var(--first-color);
+  color: var(--first-color); /* Neon green */
 }
 
 .home__social {
@@ -218,11 +220,11 @@ img {
   width: max-content;
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
-  color: var(--second-color);
+  color: var(--second-color); /* Dark gray */
 }
 
 .home__social-icon:hover {
-  color: var(--first-color);
+  color: var(--first-color); /* Neon green on hover */
 }
 
 .home__img {
@@ -232,18 +234,10 @@ img {
   width: 260px;
 }
 
-.home__blob {
-  fill: var(--first-color);
-}
-
-.home__blob-img {
-  width: 360px;
-}
-
 /*BUTTONS*/
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: var(--first-color); /* Neon green */
   color: #fff;
   padding: .75rem 2.5rem;
   font-weight: var(--font-semi);
@@ -252,6 +246,7 @@ img {
 }
 
 .button:hover {
+  background-color: var(--hover-color); /* Light neon green */
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
@@ -263,6 +258,7 @@ img {
 
 .about__subtitle {
   margin-bottom: var(--mb-2);
+  color: var(--first-color); /* Neon green */
 }
 
 .about__img {
@@ -303,7 +299,7 @@ img {
 .skills__icon {
   font-size: 2rem;
   margin-right: var(--mb-2);
-  color: var(--first-color);
+  color: var(--first-color); /* Neon green */
 }
 
 .skills__names {
@@ -315,30 +311,10 @@ img {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: var(--first-color);
+  background-color: var(--first-color); /* Neon green */
   height: .25rem;
   border-radius: .5rem;
   z-index: var(--z-back);
-}
-
-.skills__html {
-  width: 95%;
-}
-
-.skills__css {
-  width: 85%;
-}
-
-.skills__js {
-  width: 50%;
-}
-
-.skills__ux {
-  width: 50%;
-}
-
-.skills__img {
-  border-radius: .5rem;
 }
 
 /* ===== WORK =====*/
@@ -384,7 +360,7 @@ img {
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
-  color: #fff;
+  color: var(--text-color); /* Neon green */
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
@@ -401,7 +377,7 @@ img {
 
 .footer__icon {
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--text-color); /* Neon green */
   margin: 0 var(--mb-2);
 }
 
@@ -491,7 +467,7 @@ img {
     display: none;
   }
   .nav__link {
-    color: var(--second-color);
+    color: var(--text-color);
   }
   .home {
     padding: 8rem 0 2rem;
