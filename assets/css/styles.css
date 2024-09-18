@@ -231,9 +231,20 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 260px;
+  width: 290px;
 }
 
+
+
+
+.home__blob {
+  fill: hsl(240, 10%, 50%); /* Dark Gray */
+}
+
+
+.home__blob-img {
+  width: 360px;
+}
 /*BUTTONS*/
 .button {
   display: inline-block;
@@ -386,22 +397,6 @@ img {
 }
 
 
-.home__img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 260px;
-}
-
-
-.home__blob {
-  fill: hsl(240, 10%, 50%); /* Dark Gray */
-}
-
-
-.home__blob-img {
-  width: 360px;
-}
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
