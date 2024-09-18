@@ -54,3 +54,31 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+
+
+// Select the ball and score display
+const ball = document.getElementById('ball');
+const scoreDisplay = document.getElementById('score-display');
+
+let score = 0;
+
+// Function to move the ball to a random position
+function moveBall() {
+  const gameContainer = document.getElementById('game-container');
+  const maxX = gameContainer.offsetWidth - ball.offsetWidth;
+  const maxY = gameContainer.offsetHeight - ball.offsetHeight;
+
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  ball.style.left = `${randomX}px`;
+  ball.style.top = `${randomY}px`;
+}
+
+// Function to update the score when the ball is clicked
+ball.addEventListener('click', function() {
+  score++;
+  scoreDisplay.textContent = `Score: ${score}`;
+  moveBall(); // Move the ball to a new position
+});
